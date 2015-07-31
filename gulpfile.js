@@ -20,11 +20,11 @@ gulp.task('default',['server', 'scripts', 'html', 'styles', 'images', 'watch']);
 
 /* server */
 gulp.task('server',function(){
-	gulp.src(config.path.dist)
+	gulp.src(config.path.dist) 
 		.pipe(webserver(config.path.dist));
 });
 
-/* clean [ js, css ] */
+/* clean [ html, js, css, images ] */
 gulp.task('clean',function(){
 	del([
 		config.path.html.dest+'*',
