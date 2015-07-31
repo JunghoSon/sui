@@ -1,0 +1,101 @@
+ {
+	"lint"   : {
+		"html"    : false,
+
+		"scripts" : {
+			"app"        : true,
+			"asset"      : true,
+			"lib"        : false,
+			"controller" : true,
+			"template"   : true,
+			"util"       : true,
+			"ui"         : true
+		},
+
+		"styles"  : false	
+	},
+
+	"concat" : {
+		"html"    : false,
+		"scripts" : false,
+		"styles"  : true	
+	},
+	
+	"uglify" : {
+		"html"    : false,
+		
+		"scripts" : {
+			"app"        : true,
+			"asset"      : false,
+			"controller" : true,
+			"lib"        : false,
+			"template"   : true,
+			"util"       : true,
+			"ui"         : true
+		},
+		
+		"styles"  : true	
+	},
+	
+	"uglify_option":{
+		"mangle"           : false,
+		"preserveComments" : "some"
+	},
+
+	"rename" : {
+		"html"    : false,
+		
+		"scripts" : {
+			"app"        : true,
+			"asset"      : false,
+			"controller" : true,
+			"lib"        : false,
+			"template"   : true,
+			"util"       : true,
+			"ui"         : true
+		},
+
+		"styles"  : true	
+	},
+	
+	"rename_option":{
+		"suffix" : ".min"
+	},
+
+	"path":{
+		"dist":"public/dist/",
+
+		"js":{
+			"src":{
+				"app"        : "public/src/js/app.js",
+				"asset"      : "public/src/js/asset/*.json",
+				"controller" : "public/src/js/controller/*.js",
+				"libs"       : "public/src/js/libs/*.js",
+				"template"   : "public/src/js/tmpl/*.js",
+				"util"       : "public/src/js/util/*.js",
+				"ui"         : "public/src/js/ui/*.js"
+			},
+
+			"dest":{
+				"app"        : "public/dist/js/",
+				"asset"      : "public/dist/js/asset/",
+				"controller" : "public/dist/js/controller/",
+				"libs"       : "public/dist/js/libs/",
+				"template"   : "public/dist/js/tmpl/",
+				"util"       : "public/dist/js/util/",
+				"ui"         : "public/dist/js/ui/"
+			}
+		},
+
+		"css":{
+			"src"    : "public/src/css/*.css",
+			"dest"   : "public/dist/css/",
+			"result" : "style.css"
+		},
+
+		"html":{
+			"src"    : "public/src/html/*.html",
+			"dest"   : "public/dist/html/"
+		}
+	}
+}

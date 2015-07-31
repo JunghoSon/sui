@@ -1,0 +1,63 @@
+{
+	"MENU":[
+		{
+			"NAME":"CHART",
+			"CHILD":[
+				{
+					"NAME":"PIE",
+					"HASH":"chart/pie"
+				}
+			]
+		},
+
+		{
+			"NAME":"UTIL",
+			"CHILD":[
+				{
+					"NAME":"PIE",
+					"HASH":"util/inherit"
+				},
+
+				{
+					"NAME":"SNS",
+					"HASH":"util/SNS"
+				},
+
+				{
+					"NAME":"VALIDATION",
+					"HASH":"util/validation"
+				}
+			]
+		},
+
+		{
+			"NAME":"UI",
+			"CHILD":[
+				{
+					"NAME":"ACCORDION",
+					"HASH":"ui/accordion"
+				},
+
+				{
+					"NAME":"SELECTBOX",
+					"HASH":"ui/selectbox"
+				},
+
+				{
+					"NAME":"SLIDE",
+					"HASH":"ui/slide"
+				},
+
+				{
+					"NAME":"SWIPE",
+					"HASH":"ui/swipe"
+				},
+
+				{
+					"NAME":"TAB",
+					"HASH":"ui/tab"
+				}
+			]
+		}
+	]
+}

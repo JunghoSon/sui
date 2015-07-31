@@ -1,0 +1,23 @@
+{
+	"INFO":{
+		"TITLE":"SLIDE GALLERY",
+		"TEXT":"PC, MOBILE 공용 슬라이드 갤러리"
+	},
+
+	"CONTENT":[
+		{
+			"TEXT":"iron-man1",
+			"IMG":"/images/iron1.png"
+		},
+
+		{
+			"TEXT":"iron-man2",
+			"IMG":"/images/iron2.png"
+		},
+
+		{
+			"TEXT":"iron-man1",
+			"IMG":"/images/iron3.png"
+		}
+	]
+}

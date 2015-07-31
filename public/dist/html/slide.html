@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>SWIPE</title>
+<style type="text/css">
+html,body{width:100%;height:100%}
+body,div,ul,li{margin:0;padding:0}
+li{list-style:none;}
+.wrap{width:100%;margin:0 auto;padding-top:70px}
+.u_slide{position:relative;width:300px;height:200px;}
+.u_slide_content>li{width:100%;height:200px;font-size:30px;text-align:center}
+.u_slide_content>li>p{padding-top:20px}
+
+.blue{background:lightblue}
+.green{background:lightgreen}
+.yellow{background:yellow}
+.orange{background:orange}
+.red{background:purple}
+
+.u_slide>a{position:absolute;top:50%;width:70px;height:30px;line-height:30px;margin-top:-15px;background:#ddd;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;-ms-border-radius:10px;text-align:center}
+.u_slide_prev{left:20px}
+.u_slide_next{right:20px}
+
+.u_slide_navigate{padding-top:10px;text-align:center}
+.u_slide_navigate>a{display:inline-block;width:10px;height:10px;margin:0 5px;background:#ddd;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;-ms-border-radius:5px;text-indent:-10000em;overflow:hidden}
+.u_slide_navigate>a.on{background:#666}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<h1>SLIDE, SWIPE</h1>
+	<P>PC에서 사용시 slide 갤러리 형식이며, 모바일에서 사용시 swipe 기능이 추가 됩니다.(모바일 또는 크롬 개발자 도구에서 userAgent 선택 후 확인 가능 합니다.)</P>
+	<h2>OUTPUT</h2>
+	<div class="u_slide" data-auto="y">
+		<div class="u_slide_container">
+			<ul class="u_slide_content">
+				<li class="blue"><p>CONTENT 1</p></li>
+				<li class="green"><p>CONTENT 2</p></li>
+				<li class="yellow"><p>CONTENT 3</p></li>
+				<li class="orange"><p>CONTENT 4</p></li>
+				<li class="red"><p>CONTENT 5</p></li>
+			</ul>
+		</div>
+		<a href="#" class="u_slide_prev">prev</a>
+		<a href="#" class="u_slide_next">next</a>
+		<div class="u_slide_navigate">
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" data-main="/js/app.min.js" src="/js/libs/require.min.js"></script>
+</body>
+</html>
