@@ -35,7 +35,8 @@ gulp.task('clean',function(){
 		config.path.js.dest.util+'*',
 		config.path.js.dest.ui+'*',
 		config.path.js.dest.tmpl+'*',
-		config.path.js.dest.asset+'*'
+		config.path.js.dest.asset+'*',
+		config.path.images.dest+'*'
 	]);
 });
 
