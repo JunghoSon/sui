@@ -30,6 +30,7 @@
 			'validation':'util/util.validation.min',
 
 			//ui
+			'ui.gnb':'ui/ui.gnb.min',
 			'ui.slide':'ui/ui.slide.min',
 			'ui.swipe':'ui/ui.swipe.min'
 		},

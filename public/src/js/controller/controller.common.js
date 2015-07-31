@@ -35,9 +35,9 @@ define([
 			app.ajax_request('/js/asset/menu.json', this, function(data){
 				$('nav').empty().append(Mustache.render(owner._template.menu,data));
 
-				/*require(['gnb'],function(GnbUI){
+				require(['ui.gnb'],function(GnbUI){
 					owner._nav = new GnbUI($('.u_gnb'));
-				});*/
+				});
 			});
 		},
 
