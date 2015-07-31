@@ -1,7 +1,7 @@
 {
-  "name": "gulp_sample",
+  "name": "sui",
   "version": "1.0.0",
-  "description": "gulp 사용자환경 연습",
+  "description": "javascript ui component",
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.0"
