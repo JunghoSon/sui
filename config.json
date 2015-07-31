@@ -96,6 +96,11 @@
 		"html":{
 			"src"    : "public/src/html/*.html",
 			"dest"   : "public/dist/html/"
+		},
+
+		"images":{
+			"src"    : "public/src/images/*",
+			"dest"   : "public/dist/images/"
 		}
 	}
 }

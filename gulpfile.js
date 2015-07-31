@@ -8,13 +8,15 @@ var gulp       = require('gulp'),
 	uglify     = require('gulp-uglify'),
 	uglifycss  = require('gulp-uglifycss'),
 	minifyhtml = require('gulp-minify-html'),
+	imagemin   = require('gulp-imagemin'),
+	pngquant   = require('imagemin-pngquant'),
 	gulpif     = require('gulp-if'),
 	livereload = require('gulp-livereload'),
 	del        = require('del'),
 	config     = require('./config.json');
 
 /* default [ clean, script, style, watch ] */
-gulp.task('default',['server', 'scripts', 'html', 'styles', 'watch']);
+gulp.task('default',['server', 'scripts', 'html', 'styles', 'images', 'watch']);
 
 /* server */
 gulp.task('server',function(){
@@ -32,7 +34,8 @@ gulp.task('clean',function(){
 		config.path.js.dest.libs+'*',
 		config.path.js.dest.util+'*',
 		config.path.js.dest.ui+'*',
-		config.path.js.dest.asset+'*',
+		config.path.js.dest.tmpl+'*',
+		config.path.js.dest.asset+'*'
 	]);
 });
 
@@ -120,6 +123,17 @@ gulp.task('styles',function(){
 		.pipe(gulp.dest(config.path.css.dest));
 });
 
+/* images */
+gulp.task('images',function(){
+	gulp.src(config.path.images.src)
+		.pipe(imagemin({
+			progressive:true,
+			svgoPlugins:[{removeViewBox:false}],
+			use:[pngquant()]
+		}))
+		.pipe(gulp.dest(config.path.images.dest));
+});
+
 /* livereload */
 gulp.task('watch',function(){
 	livereload.listen();
@@ -132,5 +146,6 @@ gulp.task('watch',function(){
 	gulp.watch(config.path.js.src.ui,['js:uglify-ui']);
 	gulp.watch(config.path.css.src,['styles']);
 	gulp.watch(config.path.html.src,['html']);
+	gulp.watch(config.path.images.src,['images']);
 	gulp.watch(config.path.dist+'**').on('change',livereload.changed);
 });
